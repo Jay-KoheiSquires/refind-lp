@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFIND | Moissanite Jewelry</title>
 
-    <!-- Fonts (Montserrat like icecartel) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <!-- Announcement Bar Top -->
+    <!-- Announcement Bar -->
     <div class="top-bar">
         <div class="top-bar-track">
             <span>FREE SHIPPING OVER ¥15,000</span>
@@ -54,21 +54,20 @@
                 <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="logo-img">
             </a>
             <nav class="nav">
-                <a href="#" class="nav-link">NEW ARRIVALS</a>
+                <a href="#" class="nav-link">NEW</a>
                 <a href="#" class="nav-link">NECKLACES</a>
                 <a href="#" class="nav-link">EARRINGS</a>
                 <a href="#" class="nav-link">SETS</a>
-                <a href="#" class="nav-link">ABOUT</a>
             </nav>
             <div class="header-actions">
                 <button class="icon-btn">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
                 </button>
                 <button class="icon-btn cart-btn">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="9" cy="21" r="1"></circle>
                         <circle cx="20" cy="21" r="1"></circle>
                         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -90,32 +89,34 @@
         </nav>
     </div>
 
-    <!-- Hero Slider (コンパクト版 - 画面全体ではない) -->
-    <section class="hero-section hero-compact">
+    <!-- Hero Slider (refind-prototype風 - 背景画像+中央テキスト) -->
+    <section class="hero-section">
         <div class="splide hero-slider" id="heroSlider">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
                         <div class="hero-slide">
-                            <div class="hero-image">
+                            <div class="hero-bg">
                                 <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Cuban Link">
                             </div>
+                            <div class="hero-overlay"></div>
                             <div class="hero-content">
                                 <span class="hero-badge">NEW COLLECTION</span>
-                                <h1 class="hero-title">CUBAN LINK</h1>
-                                <p class="hero-text">プレミアムモアサナイトの輝き</p>
+                                <h1 class="hero-title">CUBAN LINK<br>CHAIN</h1>
+                                <p class="hero-text">VVS Moissanite / 18K Gold</p>
                                 <a href="#" class="btn btn-primary">SHOP NOW</a>
                             </div>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="hero-slide">
-                            <div class="hero-image">
+                            <div class="hero-bg">
                                 <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d681d4497fb7b886f2985c649ceea3e7.png" alt="Tennis Chain">
                             </div>
+                            <div class="hero-overlay"></div>
                             <div class="hero-content">
                                 <span class="hero-badge">BEST SELLER</span>
-                                <h1 class="hero-title">TENNIS CHAIN</h1>
+                                <h1 class="hero-title">TENNIS<br>CHAIN</h1>
                                 <p class="hero-text">永遠の定番アイテム</p>
                                 <a href="#" class="btn btn-primary">VIEW MORE</a>
                             </div>
@@ -123,12 +124,13 @@
                     </li>
                     <li class="splide__slide">
                         <div class="hero-slide">
-                            <div class="hero-image">
+                            <div class="hero-bg">
                                 <img src="https://baseec-img-mng.akamaized.net/images/item/origin/02a07646972bc0064b13fdfc97f3f728.png" alt="Cross Pendant">
                             </div>
+                            <div class="hero-overlay"></div>
                             <div class="hero-content">
                                 <span class="hero-badge">LIMITED</span>
-                                <h1 class="hero-title">CROSS PENDANT</h1>
+                                <h1 class="hero-title">CROSS<br>PENDANT</h1>
                                 <p class="hero-text">特別な輝きをあなたに</p>
                                 <a href="#" class="btn btn-primary">DISCOVER</a>
                             </div>
@@ -136,52 +138,36 @@
                     </li>
                 </ul>
             </div>
-            <div class="splide__arrows">
-                <button class="splide__arrow splide__arrow--prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
-                </button>
-                <button class="splide__arrow splide__arrow--next">
-                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
-                </button>
-            </div>
         </div>
     </section>
 
-    <!-- Trust Badges (コンパクト) -->
+    <!-- Trust Badges -->
     <section class="trust-section">
         <div class="trust-grid">
             <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <path d="M9 12l2 2 4-4"></path>
                 </svg>
-                <span>SECURE CHECKOUT</span>
+                <span>SECURE</span>
             </div>
             <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <rect x="1" y="3" width="22" height="18" rx="2"></rect>
-                    <path d="M1 9h22"></path>
-                </svg>
-                <span>EASY PAYMENTS</span>
-            </div>
-            <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                 </svg>
-                <span>FAST SHIPPING</span>
+                <span>FAST SHIP</span>
             </div>
             <div class="trust-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
                     <line x1="4" y1="22" x2="4" y2="15"></line>
                 </svg>
-                <span>LIFETIME WARRANTY</span>
+                <span>WARRANTY</span>
             </div>
         </div>
     </section>
 
-    <!-- Best Sellers (スライド形式) -->
-    <section class="section section-compact">
+    <!-- Best Sellers -->
+    <section class="section">
         <div class="section-header">
             <h2 class="section-title">BEST SELLERS</h2>
             <a href="#" class="view-all">View All</a>
@@ -224,7 +210,7 @@
                                 <img src="https://baseec-img-mng.akamaized.net/images/item/origin/02a07646972bc0064b13fdfc97f3f728.png" alt="Cross Pendant">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Cross Pendant Necklace</h3>
+                                <h3 class="product-name">Cross Pendant</h3>
                                 <div class="product-price">
                                     <span class="price-sale">¥35,000</span>
                                     <span class="price-original">¥50,000</span>
@@ -264,8 +250,8 @@
         </div>
     </section>
 
-    <!-- New Arrivals (スライド形式) -->
-    <section class="section section-compact">
+    <!-- New Arrivals -->
+    <section class="section">
         <div class="section-header">
             <h2 class="section-title">NEW ARRIVALS</h2>
             <a href="#" class="view-all">View All</a>
@@ -334,11 +320,10 @@
         </div>
     </section>
 
-    <!-- WORN BY CELEBRITIES風 スライドセクション (Instagram風から変更) -->
-    <section class="section section-compact celebrities-section">
+    <!-- WORN BY STYLE ICONS (スライド) -->
+    <section class="section celebrities-section">
         <div class="section-header center">
             <h2 class="section-title">WORN BY STYLE ICONS</h2>
-            <p class="section-subtitle">REFINDを身につけるスタイルアイコンたち</p>
         </div>
         <div class="splide celebrities-slider" id="celebritiesSlider">
             <div class="splide__track">
@@ -378,15 +363,13 @@
         </div>
     </section>
 
-    <!-- Youtube Section (中央揃え) -->
-    <section class="section section-compact youtube-section">
+    <!-- Youtube Section -->
+    <section class="section youtube-section">
         <div class="section-header center">
             <h2 class="section-title">WATCH OUR STORY</h2>
-            <p class="section-subtitle">REFINDの輝きを動画でチェック</p>
         </div>
         <div class="youtube-container">
             <div class="youtube-wrapper">
-                <!-- プレースホルダー - 実際のYoutube IDに置き換え -->
                 <iframe
                     src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                     title="REFIND Story"
@@ -398,13 +381,13 @@
         </div>
     </section>
 
-    <!-- Reviews (コンパクト) -->
-    <section class="section section-compact reviews-section">
+    <!-- Reviews -->
+    <section class="section">
         <div class="section-header center">
-            <h2 class="section-title">CUSTOMER REVIEWS</h2>
+            <h2 class="section-title">REVIEWS</h2>
             <div class="reviews-summary">
-                <div class="stars-large">★★★★★</div>
-                <p>4.9/5 based on 500+ reviews</p>
+                <span class="stars-large">★★★★★</span>
+                <span class="review-count">4.9 (500+)</span>
             </div>
         </div>
         <div class="splide reviews-slider" id="reviewsSlider">
@@ -413,41 +396,29 @@
                     <li class="splide__slide">
                         <div class="review-card">
                             <div class="review-stars">★★★★★</div>
-                            <p class="review-text">"クオリティがやばい。ダイヤモンドと見分けつかないレベルで輝いてる。"</p>
-                            <div class="review-author">
-                                <strong>T.K.</strong>
-                                <span>Cuban Link Chain 8mm</span>
-                            </div>
+                            <p class="review-text">"クオリティがやばい。ダイヤと見分けつかない。"</p>
+                            <div class="review-author">T.K. - Cuban Link</div>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="review-card">
                             <div class="review-stars">★★★★★</div>
-                            <p class="review-text">"この価格でこの品質は正直驚き。発送も早いし、梱包も丁寧。"</p>
-                            <div class="review-author">
-                                <strong>M.S.</strong>
-                                <span>Tennis Chain 4mm</span>
-                            </div>
+                            <p class="review-text">"この価格でこの品質は驚き。発送も早い。"</p>
+                            <div class="review-author">M.S. - Tennis Chain</div>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="review-card">
                             <div class="review-stars">★★★★★</div>
-                            <p class="review-text">"彼女へのプレゼントで購入。めちゃくちゃ喜んでくれた！"</p>
-                            <div class="review-author">
-                                <strong>Y.H.</strong>
-                                <span>Cross Pendant</span>
-                            </div>
+                            <p class="review-text">"彼女へのプレゼントで購入。喜んでくれた！"</p>
+                            <div class="review-author">Y.H. - Cross Pendant</div>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="review-card">
                             <div class="review-stars">★★★★☆</div>
-                            <p class="review-text">"写真通りの商品が届いた。輝きも申し分なし。"</p>
-                            <div class="review-author">
-                                <strong>K.N.</strong>
-                                <span>Rope Chain 5mm</span>
-                            </div>
+                            <p class="review-text">"写真通りの商品。輝きも申し分なし。"</p>
+                            <div class="review-author">K.N. - Rope Chain</div>
                         </div>
                     </li>
                 </ul>
@@ -455,159 +426,111 @@
         </div>
     </section>
 
-    <!-- FAQ Section (アコーディオン形式) -->
-    <section class="section section-compact faq-section">
+    <!-- FAQ -->
+    <section class="section faq-section">
         <div class="section-header center">
             <h2 class="section-title">FAQ</h2>
-            <p class="section-subtitle">よくあるご質問</p>
         </div>
         <div class="faq-container">
             <div class="faq-item">
                 <button class="faq-question">
                     <span>モアサナイトとダイヤモンドの違いは？</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
+                    <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <p>モアサナイトはダイヤモンドより高い輝き（屈折率2.65-2.69）を持ち、ダイヤモンドと同等の硬度（9.25）を誇ります。見た目はほぼ同一ですが、価格は約1/10。エシカルで環境にも優しい宝石です。</p>
+                    <p>モアサナイトはダイヤモンドより高い輝きを持ち、価格は約1/10。エシカルで環境にも優しい宝石です。</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">
                     <span>送料はいくらですか？</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
+                    <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <p>¥15,000以上のご購入で送料無料です。それ以下の場合は全国一律¥500となります。</p>
+                    <p>¥15,000以上で送料無料。それ以下は全国一律¥500です。</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">
                     <span>返品・交換はできますか？</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
+                    <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <p>商品到着後30日以内であれば、未使用品に限り返品・交換を承ります。サイズ交換も無料で対応いたします。</p>
+                    <p>30日以内であれば未使用品に限り返品・交換可能です。</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">
                     <span>保証はありますか？</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
+                    <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <p>全商品に永久保証が付いています。通常使用での破損は無償で修理・交換いたします。</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question">
-                    <span>支払い方法は何がありますか？</span>
-                    <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
-                </button>
-                <div class="faq-answer">
-                    <p>クレジットカード（VISA/Mastercard/AMEX/JCB）、PayPay、Apple Pay、Shop Pay、コンビニ払いに対応しています。</p>
+                    <p>全商品に永久保証付き。通常使用での破損は無償修理・交換。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter (コンパクト) -->
+    <!-- Newsletter -->
     <section class="newsletter-section">
         <div class="newsletter-content">
-            <h2>JOIN THE REFIND FAMILY</h2>
-            <p>新作情報や限定セールをいち早くお届け</p>
+            <h2>JOIN THE FAMILY</h2>
+            <p>新作情報・限定セールをお届け</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+                <input type="email" placeholder="メールアドレス" required>
+                <button type="submit" class="btn btn-primary">登録</button>
             </form>
-            <span class="newsletter-note">登録で初回10%OFFクーポンプレゼント</span>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col footer-brand">
-                    <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="footer-logo">
-                    <p>Premium Moissanite Jewelry</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
-                        </a>
-                        <a href="#" aria-label="TikTok">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h4>SHOP</h4>
-                    <ul>
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">Necklaces</a></li>
-                        <li><a href="#">Earrings</a></li>
-                        <li><a href="#">Sets</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>HELP</h4>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Returns</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>ABOUT</h4>
-                    <ul>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Moissanite</a></li>
-                        <li><a href="#">Reviews</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+            <div class="footer-brand">
+                <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="footer-logo">
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 REFIND. All rights reserved.</p>
-                <div class="payment-methods">
-                    <span>Visa</span>
-                    <span>Mastercard</span>
-                    <span>PayPay</span>
-                    <span>Apple Pay</span>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <a href="#">Shop</a>
+                    <a href="#">About</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <a href="#">Contact</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
                 </div>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 REFIND</p>
         </div>
     </footer>
 
     <!-- Mobile Bottom Nav -->
     <nav class="mobile-bottom-nav">
         <a href="#" class="nav-item active">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
             <span>Home</span>
         </a>
         <a href="#" class="nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
             <span>Search</span>
         </a>
         <a href="#" class="nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             <span>Wishlist</span>
         </a>
         <a href="#" class="nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
             <span>Cart</span>
         </a>
     </nav>
