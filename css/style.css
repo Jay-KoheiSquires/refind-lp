@@ -368,6 +368,109 @@ ul { list-style: none; }
 }
 
 /* ===================================
+   Collection Highlights (カテゴリバナー)
+   =================================== */
+.collection-section {
+    background: #0a0a0a;
+}
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+.collection-card {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-bg-card);
+}
+.collection-image {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.collection-image img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform var(--transition);
+}
+.collection-card:hover .collection-image img {
+    transform: scale(1.1);
+}
+.collection-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    text-align: center;
+}
+.collection-info h3 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.collection-info span {
+    font-size: 0.6rem;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/* ===================================
+   Promo Banner
+   =================================== */
+.promo-banner {
+    background: linear-gradient(135deg, var(--color-accent) 0%, #2d8bc4 100%);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+.promo-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.promo-tag {
+    display: inline-block;
+    background: rgba(0,0,0,0.2);
+    color: #fff;
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+.promo-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.promo-code {
+    font-size: 0.85rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+.promo-code strong {
+    background: rgba(0,0,0,0.15);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+.promo-banner .btn-primary {
+    background: #000;
+    color: #fff;
+}
+.promo-banner .btn-primary:hover {
+    background: #222;
+}
+
+/* ===================================
    Celebrities Section
    =================================== */
 .celebrities-section {
@@ -385,8 +488,63 @@ ul { list-style: none; }
 }
 
 /* ===================================
-   Youtube Section
+   Youtube Section (Cards Style)
    =================================== */
+.youtube-section {
+    background: #0a0a0a;
+}
+.youtube-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+.youtube-card {
+    cursor: pointer;
+}
+.youtube-thumb {
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-bg-card);
+}
+.youtube-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+.youtube-card:hover .youtube-thumb img {
+    transform: scale(1.05);
+}
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: var(--transition);
+}
+.youtube-card:hover .play-btn {
+    background: var(--color-accent);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.youtube-card-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+/* Old youtube single embed */
 .youtube-container {
     max-width: 100%;
 }
@@ -402,6 +560,31 @@ ul { list-style: none; }
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
+}
+
+/* ===================================
+   AS SEEN IN Section
+   =================================== */
+.seen-in-section {
+    background: var(--color-bg);
+}
+.media-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.media-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    transition: opacity var(--transition);
+}
+.media-logo:hover {
+    opacity: 1;
 }
 
 /* ===================================
@@ -634,6 +817,20 @@ ul { list-style: none; }
 
     .product-name { font-size: 0.8rem; }
     .price-sale { font-size: 1rem; }
+
+    .collection-grid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .collection-info h3 { font-size: 1rem; }
+    .collection-info span { font-size: 0.7rem; }
+
+    .promo-banner { padding: 3rem 2rem; }
+    .promo-title { font-size: 1.75rem; }
+
+    .youtube-cards { gap: 1.5rem; }
+    .play-btn { width: 50px; height: 50px; }
+    .youtube-card-title { font-size: 0.8rem; }
+
+    .media-logos { gap: 3rem; }
+    .media-logo { font-size: 1.25rem; }
 
     .youtube-container { max-width: 700px; margin: 0 auto; }
 
