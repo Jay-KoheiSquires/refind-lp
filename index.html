@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REFIND | Moissanite Jewelry</title>
 
-    <!-- Fonts -->
+    <!-- Fonts (Montserrat like icecartel) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Splide CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
@@ -20,56 +20,73 @@
     <!-- Page Loader -->
     <div class="page-loader" id="pageLoader">
         <div class="loader-content">
-            <div class="loader-logo">REFIND</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
+            <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="loader-logo-img">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Announcement Bar Top -->
+    <div class="top-bar">
+        <div class="top-bar-track">
+            <span>FREE SHIPPING OVER ¥15,000</span>
+            <span>•</span>
+            <span>30-DAY RETURNS</span>
+            <span>•</span>
+            <span>LIFETIME WARRANTY</span>
+            <span>•</span>
+            <span>FREE SHIPPING OVER ¥15,000</span>
+            <span>•</span>
+            <span>30-DAY RETURNS</span>
+            <span>•</span>
+            <span>LIFETIME WARRANTY</span>
         </div>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">REFIND</a>
-            <nav class="nav">
-                <a href="#" class="nav-link">NEW</a>
-                <a href="#" class="nav-link">RINGS</a>
-                <a href="#" class="nav-link">NECKLACES</a>
-                <a href="#" class="nav-link">EARRINGS</a>
-                <a href="#" class="nav-link">ABOUT</a>
-            </nav>
-            <div class="header-actions">
-                <button class="icon-btn search-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                </button>
-                <button class="icon-btn cart-btn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    <span class="cart-count">0</span>
-                </button>
-            </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <a href="#" class="logo">
+                <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#" class="nav-link">NEW ARRIVALS</a>
+                <a href="#" class="nav-link">NECKLACES</a>
+                <a href="#" class="nav-link">EARRINGS</a>
+                <a href="#" class="nav-link">SETS</a>
+                <a href="#" class="nav-link">ABOUT</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn cart-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <nav class="mobile-nav">
-            <a href="#" class="mobile-nav-link">NEW</a>
-            <a href="#" class="mobile-nav-link">RINGS</a>
-            <a href="#" class="mobile-nav-link">NECKLACES</a>
-            <a href="#" class="mobile-nav-link">EARRINGS</a>
-            <a href="#" class="mobile-nav-link">ABOUT</a>
+            <a href="#">NEW ARRIVALS</a>
+            <a href="#">NECKLACES</a>
+            <a href="#">EARRINGS</a>
+            <a href="#">SETS</a>
+            <a href="#">ABOUT</a>
         </nav>
     </div>
 
@@ -79,294 +96,314 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <div class="hero-slide" style="background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);">
+                        <div class="hero-slide">
+                            <div class="hero-bg">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Cuban Link">
+                            </div>
                             <div class="hero-content">
-                                <span class="hero-tag">NEW COLLECTION</span>
-                                <h1 class="hero-title">Moissanite<br>Elegance</h1>
-                                <p class="hero-text">ダイヤモンドを超える輝き<br>エシカルな選択</p>
+                                <span class="hero-badge">NEW COLLECTION</span>
+                                <h1 class="hero-title">CUBAN LINK<br>COLLECTION</h1>
+                                <p class="hero-text">プレミアムモアサナイトの輝き</p>
                                 <a href="#" class="btn btn-primary">SHOP NOW</a>
                             </div>
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=600&fit=crop" alt="Ring">
-                            </div>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="hero-slide" style="background: linear-gradient(135deg, #0d1117 0%, #000 100%);">
+                        <div class="hero-slide">
+                            <div class="hero-bg">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d681d4497fb7b886f2985c649ceea3e7.png" alt="Tennis Chain">
+                            </div>
                             <div class="hero-content">
-                                <span class="hero-tag">BEST SELLER</span>
-                                <h1 class="hero-title">Tennis<br>Bracelet</h1>
-                                <p class="hero-text">永遠の定番<br>上質な輝きをまとう</p>
+                                <span class="hero-badge">BEST SELLER</span>
+                                <h1 class="hero-title">TENNIS<br>CHAIN</h1>
+                                <p class="hero-text">永遠の定番アイテム</p>
                                 <a href="#" class="btn btn-primary">VIEW MORE</a>
                             </div>
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&h=600&fit=crop" alt="Bracelet">
-                            </div>
                         </div>
                     </li>
                     <li class="splide__slide">
-                        <div class="hero-slide" style="background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);">
-                            <div class="hero-content">
-                                <span class="hero-tag">LIMITED</span>
-                                <h1 class="hero-title">Pendant<br>Collection</h1>
-                                <p class="hero-text">特別な人への贈り物に<br>心に残る輝き</p>
-                                <a href="#" class="btn btn-primary">DISCOVER</a>
+                        <div class="hero-slide">
+                            <div class="hero-bg">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/02a07646972bc0064b13fdfc97f3f728.png" alt="Cross Pendant">
                             </div>
-                            <div class="hero-image">
-                                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=600&fit=crop" alt="Pendant">
+                            <div class="hero-content">
+                                <span class="hero-badge">LIMITED</span>
+                                <h1 class="hero-title">CROSS<br>PENDANT</h1>
+                                <p class="hero-text">特別な輝きをあなたに</p>
+                                <a href="#" class="btn btn-primary">DISCOVER</a>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <div class="announcement-track">
-            <span class="announcement-item">✦ FREE SHIPPING ON ORDERS OVER ¥15,000</span>
-            <span class="announcement-item">✦ 30-DAY MONEY BACK GUARANTEE</span>
-            <span class="announcement-item">✦ LIFETIME WARRANTY</span>
-            <span class="announcement-item">✦ FREE SHIPPING ON ORDERS OVER ¥15,000</span>
-            <span class="announcement-item">✦ 30-DAY MONEY BACK GUARANTEE</span>
-            <span class="announcement-item">✦ LIFETIME WARRANTY</span>
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                <span>SECURE CHECKOUT</span>
+            </div>
+            <div class="trust-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="1" y="3" width="22" height="18" rx="2"></rect>
+                    <path d="M1 9h22"></path>
+                </svg>
+                <span>EASY PAYMENTS</span>
+            </div>
+            <div class="trust-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                <span>FAST SHIPPING</span>
+            </div>
+            <div class="trust-item">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                    <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+                <span>LIFETIME WARRANTY</span>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Featured Collection Slider -->
-    <section class="section featured-section">
+    <!-- Best Sellers -->
+    <section class="section">
         <div class="section-header">
             <h2 class="section-title">BEST SELLERS</h2>
-            <a href="#" class="view-all">VIEW ALL →</a>
+            <a href="#" class="view-all">View All</a>
         </div>
         <div class="splide product-slider" id="bestSellerSlider">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge">BEST</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Cuban Link Chain">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Moissanite Solitaire Ring</h3>
+                                <h3 class="product-name">Cuban Link Chain 8mm</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥49,800</span>
+                                    <span class="price-sale">¥49,800</span>
                                     <span class="price-original">¥68,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(128)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">128 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d681d4497fb7b886f2985c649ceea3e7.png" alt="Tennis Chain">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Tennis Bracelet 4mm</h3>
+                                <h3 class="product-name">Tennis Chain 4mm</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥78,000</span>
+                                    <span class="price-sale">¥78,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(89)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">89 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge sale">-30%</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/02a07646972bc0064b13fdfc97f3f728.png" alt="Cross Pendant">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Pendant Necklace</h3>
+                                <h3 class="product-name">Cross Pendant Necklace</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥35,000</span>
+                                    <span class="price-sale">¥35,000</span>
                                     <span class="price-original">¥50,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★☆</span>
-                                    <span class="count">(64)</span>
+                                    <div class="stars">★★★★☆</div>
+                                    <span class="rating-count">64 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/c3e2ea7c0a7581056eedfdbc6468ce60.png" alt="Miami Cuban">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Stud Earrings 1ct</h3>
+                                <h3 class="product-name">Miami Cuban Link</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥42,000</span>
+                                    <span class="price-sale">¥58,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(156)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">156 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge new">NEW</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/8cf9814f5bd8e4235d0cc1370eb52ce4.png" alt="Rope Chain">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Eternity Band</h3>
+                                <h3 class="product-name">Rope Chain 5mm</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥58,000</span>
+                                    <span class="price-sale">¥42,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(42)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">42 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Category Grid -->
-    <section class="section category-section">
-        <div class="section-header">
-            <h2 class="section-title">SHOP BY CATEGORY</h2>
-        </div>
-        <div class="category-grid">
-            <a href="#" class="category-card large">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&h=600&fit=crop" alt="Rings">
-                <div class="category-overlay">
-                    <span class="category-name">RINGS</span>
-                    <span class="category-count">32 items</span>
+    <!-- Category Banner -->
+    <section class="category-banner">
+        <div class="category-banner-grid">
+            <a href="#" class="category-banner-item">
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Necklaces">
+                <div class="category-banner-content">
+                    <h3>NECKLACES</h3>
+                    <span class="category-btn">SHOP NOW →</span>
                 </div>
             </a>
-            <a href="#" class="category-card">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop" alt="Necklaces">
-                <div class="category-overlay">
-                    <span class="category-name">NECKLACES</span>
-                    <span class="category-count">24 items</span>
+            <a href="#" class="category-banner-item">
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/f4a6f3cb8a05fee893a517c0c6266e17.png" alt="Earrings">
+                <div class="category-banner-content">
+                    <h3>EARRINGS</h3>
+                    <span class="category-btn">SHOP NOW →</span>
                 </div>
             </a>
-            <a href="#" class="category-card">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=400&fit=crop" alt="Earrings">
-                <div class="category-overlay">
-                    <span class="category-name">EARRINGS</span>
-                    <span class="category-count">18 items</span>
-                </div>
-            </a>
-            <a href="#" class="category-card">
-                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=400&h=400&fit=crop" alt="Bracelets">
-                <div class="category-overlay">
-                    <span class="category-name">BRACELETS</span>
-                    <span class="category-count">15 items</span>
+            <a href="#" class="category-banner-item">
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/1d2abd634b6dc0ed96d9aee863234953.png" alt="Sets">
+                <div class="category-banner-content">
+                    <h3>JEWELRY SETS</h3>
+                    <span class="category-btn">SHOP NOW →</span>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- New Arrivals Slider -->
-    <section class="section new-arrivals-section">
+    <!-- New Arrivals -->
+    <section class="section">
         <div class="section-header">
             <h2 class="section-title">NEW ARRIVALS</h2>
-            <a href="#" class="view-all">VIEW ALL →</a>
+            <a href="#" class="view-all">View All</a>
         </div>
         <div class="splide product-slider" id="newArrivalsSlider">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge new">NEW</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/4e76ede6214d636f2d96b6a26a17bc7e.png" alt="Figaro Chain">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Cuban Link Chain</h3>
+                                <h3 class="product-name">Figaro Chain 6mm</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥68,000</span>
+                                    <span class="price-sale">¥45,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(12)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">12 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge new">NEW</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/dee98b82f198c3fdc6e8268833400d11.png" alt="Box Chain Set">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Halo Engagement Ring</h3>
+                                <h3 class="product-name">Box Chain Set</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥89,000</span>
+                                    <span class="price-sale">¥89,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(8)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">8 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge new">NEW</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/f4a6f3cb8a05fee893a517c0c6266e17.png" alt="Earrings">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Drop Earrings</h3>
+                                <h3 class="product-name">Moissanite Studs</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥52,000</span>
+                                    <span class="price-sale">¥32,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★☆</span>
-                                    <span class="count">(5)</span>
+                                    <div class="stars">★★★★☆</div>
+                                    <span class="rating-count">5 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                     <li class="splide__slide">
-                        <div class="product-card">
+                        <a href="#" class="product-card">
                             <div class="product-badge new">NEW</div>
                             <div class="product-image">
-                                <img src="https://images.unsplash.com/photo-1598560917807-1bae44bd2be8?w=400&h=400&fit=crop" alt="Product">
-                                <button class="quick-add">+ QUICK ADD</button>
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/1d2abd634b6dc0ed96d9aee863234953.png" alt="Set">
                             </div>
                             <div class="product-info">
-                                <h3 class="product-name">Three Stone Ring</h3>
+                                <h3 class="product-name">Premium Set</h3>
                                 <div class="product-price">
-                                    <span class="price-current">¥75,000</span>
+                                    <span class="price-sale">¥128,000</span>
                                 </div>
                                 <div class="product-rating">
-                                    <span class="stars">★★★★★</span>
-                                    <span class="count">(3)</span>
+                                    <div class="stars">★★★★★</div>
+                                    <span class="rating-count">3 reviews</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="promo-content">
+            <span class="promo-tag">LIMITED TIME OFFER</span>
+            <h2 class="promo-title">GET 20% OFF YOUR FIRST ORDER</h2>
+            <p class="promo-text">Use code: <strong>REFIND20</strong></p>
+            <a href="#" class="btn btn-primary">SHOP NOW</a>
         </div>
     </section>
 
@@ -376,56 +413,53 @@
             <h2 class="section-title">WHY CHOOSE REFIND</h2>
         </div>
         <div class="why-grid">
-            <div class="why-card">
+            <div class="why-item">
                 <div class="why-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                        <path d="M2 17l10 5 10-5"></path>
-                        <path d="M2 12l10 5 10-5"></path>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                     </svg>
                 </div>
-                <h3 class="why-title">Premium Quality</h3>
-                <p class="why-text">最高品質のモアサナイトを使用。ダイヤモンドを超える輝きをお約束します。</p>
+                <h3>Premium Quality</h3>
+                <p>最高品質のモアサナイトを厳選。ダイヤモンドを超える輝きを実現。</p>
             </div>
-            <div class="why-card">
+            <div class="why-item">
                 <div class="why-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg>
                 </div>
-                <h3 class="why-title">Lifetime Warranty</h3>
-                <p class="why-text">永久保証付き。万が一の際も安心のサポート体制を整えています。</p>
+                <h3>Lifetime Warranty</h3>
+                <p>永久保証付き。万が一の際も安心のサポート体制。</p>
             </div>
-            <div class="why-card">
+            <div class="why-item">
                 <div class="why-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="1" y="3" width="22" height="18" rx="2" ry="2"></rect>
-                        <line x1="1" y1="9" x2="23" y2="9"></line>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                     </svg>
                 </div>
-                <h3 class="why-title">Secure Payment</h3>
-                <p class="why-text">Shop Pay、Apple Pay、PayPayなど多彩な決済に対応。</p>
+                <h3>Free Shipping</h3>
+                <p>¥15,000以上で送料無料。最短翌日発送。</p>
             </div>
-            <div class="why-card">
+            <div class="why-item">
                 <div class="why-icon">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </svg>
                 </div>
-                <h3 class="why-title">Free Shipping</h3>
-                <p class="why-text">¥15,000以上のご注文で送料無料。最短翌日発送でお届け。</p>
+                <h3>Easy Returns</h3>
+                <p>30日間返品保証。満足いただけない場合は全額返金。</p>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Slider -->
+    <!-- Reviews -->
     <section class="section reviews-section">
         <div class="section-header center">
             <h2 class="section-title">CUSTOMER REVIEWS</h2>
             <div class="reviews-summary">
-                <span class="stars-large">★★★★★</span>
-                <span class="reviews-count">4.9 / 5 based on 500+ reviews</span>
+                <div class="stars-large">★★★★★</div>
+                <p>4.9/5 based on 500+ reviews</p>
             </div>
         </div>
         <div class="splide reviews-slider" id="reviewsSlider">
@@ -433,54 +467,46 @@
                 <ul class="splide__list">
                     <li class="splide__slide">
                         <div class="review-card">
-                            <div class="review-header">
-                                <span class="review-stars">★★★★★</span>
-                                <span class="review-verified">✓ Verified Purchase</span>
-                            </div>
-                            <p class="review-text">"ダイヤモンドと見分けがつかないくらい輝いています。彼女へのプロポーズで使いましたが、大喜びでした！"</p>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"クオリティがやばい。ダイヤモンドと見分けつかないレベルで輝いてる。友達にも勧めまくってる。"</p>
                             <div class="review-author">
-                                <span class="author-name">T.K.</span>
-                                <span class="review-product">Moissanite Solitaire Ring</span>
+                                <strong>T.K.</strong>
+                                <span>Cuban Link Chain 8mm</span>
                             </div>
+                            <span class="review-verified">✓ 購入確認済み</span>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="review-card">
-                            <div class="review-header">
-                                <span class="review-stars">★★★★★</span>
-                                <span class="review-verified">✓ Verified Purchase</span>
-                            </div>
-                            <p class="review-text">"品質の高さに驚きました。この価格でこのクオリティは本当にお得です。リピート購入決定！"</p>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"この価格でこの品質は正直驚き。発送も早いし、梱包も丁寧。リピ確定です。"</p>
                             <div class="review-author">
-                                <span class="author-name">M.S.</span>
-                                <span class="review-product">Tennis Bracelet 4mm</span>
+                                <strong>M.S.</strong>
+                                <span>Tennis Chain 4mm</span>
                             </div>
+                            <span class="review-verified">✓ 購入確認済み</span>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="review-card">
-                            <div class="review-header">
-                                <span class="review-stars">★★★★★</span>
-                                <span class="review-verified">✓ Verified Purchase</span>
-                            </div>
-                            <p class="review-text">"発送も早く、梱包も丁寧でした。ジュエリーの輝きも素晴らしく、毎日つけています。"</p>
+                            <div class="review-stars">★★★★★</div>
+                            <p class="review-text">"彼女へのプレゼントで購入。めちゃくちゃ喜んでくれた！自分用にも買おうか検討中。"</p>
                             <div class="review-author">
-                                <span class="author-name">Y.H.</span>
-                                <span class="review-product">Stud Earrings 1ct</span>
+                                <strong>Y.H.</strong>
+                                <span>Cross Pendant</span>
                             </div>
+                            <span class="review-verified">✓ 購入確認済み</span>
                         </div>
                     </li>
                     <li class="splide__slide">
                         <div class="review-card">
-                            <div class="review-header">
-                                <span class="review-stars">★★★★☆</span>
-                                <span class="review-verified">✓ Verified Purchase</span>
-                            </div>
-                            <p class="review-text">"デザインがシンプルで上品。サイズもぴったりでした。次はネックレスも購入予定です。"</p>
+                            <div class="review-stars">★★★★☆</div>
+                            <p class="review-text">"写真通りの商品が届いた。輝きも申し分なし。次はセットで買いたい。"</p>
                             <div class="review-author">
-                                <span class="author-name">K.N.</span>
-                                <span class="review-product">Eternity Band</span>
+                                <strong>K.N.</strong>
+                                <span>Rope Chain 5mm</span>
                             </div>
+                            <span class="review-verified">✓ 購入確認済み</span>
                         </div>
                     </li>
                 </ul>
@@ -488,7 +514,7 @@
         </div>
     </section>
 
-    <!-- Instagram Section -->
+    <!-- Instagram -->
     <section class="section instagram-section">
         <div class="section-header center">
             <h2 class="section-title">@REFIND_JEWELRY</h2>
@@ -496,66 +522,36 @@
         </div>
         <div class="instagram-grid">
             <a href="#" class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=300&h=300&fit=crop" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/25f39845fe1ac9f074361a36a54832b3.png" alt="Instagram">
             </a>
             <a href="#" class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=300&h=300&fit=crop" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/4ea2cf78d6f123f0ced638b108685f99.png" alt="Instagram">
             </a>
             <a href="#" class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=300&h=300&fit=crop" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/1eb3279199af32018d2fe9de4e263619.png" alt="Instagram">
             </a>
             <a href="#" class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=300&h=300&fit=crop" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3e031b7477a0363907e970d8289a4a18.png" alt="Instagram">
             </a>
             <a href="#" class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?w=300&h=300&fit=crop" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/4cb425017b2404ad99572ea17d7c7dc4.png" alt="Instagram">
             </a>
             <a href="#" class="instagram-item">
-                <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=300&h=300&fit=crop" alt="Instagram">
-                <div class="instagram-overlay">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </div>
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Instagram">
             </a>
         </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="section newsletter-section">
-        <div class="newsletter-container">
-            <h2 class="newsletter-title">JOIN THE REFIND FAMILY</h2>
-            <p class="newsletter-text">新作情報、限定セール、特別オファーをいち早くお届けします</p>
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>JOIN THE REFIND FAMILY</h2>
+            <p>新作情報や限定セールをいち早くお届け</p>
             <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email" class="newsletter-input">
+                <input type="email" placeholder="Enter your email" required>
                 <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
             </form>
-            <p class="newsletter-note">登録で初回10%OFF</p>
+            <span class="newsletter-note">登録で初回10%OFFクーポンプレゼント</span>
         </div>
     </section>
 
@@ -563,40 +559,34 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-logo">REFIND</h3>
-                    <p class="footer-desc">Moissanite Jewelry for the Modern Era</p>
+                <div class="footer-col footer-brand">
+                    <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="footer-logo">
+                    <p>Premium Moissanite Jewelry</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/>
-                            </svg>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
                         </a>
-                        <a href="#" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
+                        <a href="#" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg>
                         </a>
-                        <a href="#" class="social-link">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
-                            </svg>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-title">SHOP</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">All Jewelry</a></li>
-                        <li><a href="#">Rings</a></li>
+                    <h4>SHOP</h4>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
                         <li><a href="#">Necklaces</a></li>
                         <li><a href="#">Earrings</a></li>
-                        <li><a href="#">Bracelets</a></li>
+                        <li><a href="#">Sets</a></li>
+                        <li><a href="#">New Arrivals</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-title">SUPPORT</h4>
-                    <ul class="footer-links">
+                    <h4>HELP</h4>
+                    <ul>
                         <li><a href="#">Contact Us</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Shipping</a></li>
@@ -605,18 +595,19 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 class="footer-title">ABOUT</h4>
-                    <ul class="footer-links">
+                    <h4>ABOUT</h4>
+                    <ul>
                         <li><a href="#">Our Story</a></li>
                         <li><a href="#">Moissanite</a></li>
-                        <li><a href="#">Sustainability</a></li>
                         <li><a href="#">Reviews</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2024 REFIND. All rights reserved.</p>
-                <div class="payment-icons">
+                <p>&copy; 2024 REFIND. All rights reserved.</p>
+                <div class="payment-methods">
                     <span>Visa</span>
                     <span>Mastercard</span>
                     <span>PayPay</span>
@@ -628,39 +619,26 @@
 
     <!-- Mobile Bottom Nav -->
     <nav class="mobile-bottom-nav">
-        <a href="#" class="bottom-nav-item active">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-            </svg>
+        <a href="#" class="nav-item active">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
             <span>Home</span>
         </a>
-        <a href="#" class="bottom-nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-            </svg>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
             <span>Search</span>
         </a>
-        <a href="#" class="bottom-nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-            </svg>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
             <span>Wishlist</span>
         </a>
-        <a href="#" class="bottom-nav-item">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <path d="M16 10a4 4 0 0 1-8 0"></path>
-            </svg>
+        <a href="#" class="nav-item">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
             <span>Cart</span>
         </a>
     </nav>
 
-    <!-- Splide JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-
-    <!-- Custom JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
