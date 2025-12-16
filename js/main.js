@@ -1,14 +1,15 @@
 /* ===================================
-   REFIND - Main JavaScript
+   REFIND - Main JavaScript v3
    =================================== */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all components
     initPageLoader();
     initMobileMenu();
     initHeroSlider();
     initProductSliders();
+    initCelebritiesSlider();
     initReviewsSlider();
+    initFaqAccordion();
 });
 
 /* ===================================
@@ -20,7 +21,7 @@ function initPageLoader() {
     window.addEventListener('load', function() {
         setTimeout(function() {
             loader.classList.add('hidden');
-        }, 1500);
+        }, 1000);
     });
 }
 
@@ -37,7 +38,6 @@ function initMobileMenu() {
             menuBtn.classList.toggle('active');
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
                 menu.classList.remove('active');
@@ -48,7 +48,7 @@ function initMobileMenu() {
 }
 
 /* ===================================
-   Hero Slider
+   Hero Slider (コンパクト版)
    =================================== */
 function initHeroSlider() {
     const heroSlider = document.getElementById('heroSlider');
@@ -58,12 +58,12 @@ function initHeroSlider() {
             type: 'fade',
             rewind: true,
             autoplay: true,
-            interval: 5000,
+            interval: 4000,
             pauseOnHover: false,
             pauseOnFocus: false,
             arrows: true,
             pagination: true,
-            speed: 1000,
+            speed: 800,
         }).mount();
     }
 }
@@ -72,16 +72,17 @@ function initHeroSlider() {
    Product Sliders
    =================================== */
 function initProductSliders() {
-    // Best Sellers Slider
     const bestSellerSlider = document.getElementById('bestSellerSlider');
     if (bestSellerSlider) {
         new Splide('#bestSellerSlider', {
             type: 'slide',
             perPage: 4,
             perMove: 1,
-            gap: '1.5rem',
+            gap: '1rem',
             pagination: false,
             arrows: true,
+            drag: 'free',
+            snap: true,
             breakpoints: {
                 1200: {
                     perPage: 3,
@@ -91,22 +92,23 @@ function initProductSliders() {
                 },
                 600: {
                     perPage: 1.5,
-                    padding: { right: '2rem' },
+                    padding: { right: '1.5rem' },
                 },
             },
         }).mount();
     }
 
-    // New Arrivals Slider
     const newArrivalsSlider = document.getElementById('newArrivalsSlider');
     if (newArrivalsSlider) {
         new Splide('#newArrivalsSlider', {
             type: 'slide',
             perPage: 4,
             perMove: 1,
-            gap: '1.5rem',
+            gap: '1rem',
             pagination: false,
             arrows: true,
+            drag: 'free',
+            snap: true,
             breakpoints: {
                 1200: {
                     perPage: 3,
@@ -116,7 +118,41 @@ function initProductSliders() {
                 },
                 600: {
                     perPage: 1.5,
-                    padding: { right: '2rem' },
+                    padding: { right: '1.5rem' },
+                },
+            },
+        }).mount();
+    }
+}
+
+/* ===================================
+   Celebrities Slider (WORN BY CELEBRITIES風)
+   =================================== */
+function initCelebritiesSlider() {
+    const celebritiesSlider = document.getElementById('celebritiesSlider');
+
+    if (celebritiesSlider) {
+        new Splide('#celebritiesSlider', {
+            type: 'loop',
+            perPage: 4,
+            perMove: 1,
+            gap: '1rem',
+            autoplay: true,
+            interval: 3000,
+            pauseOnHover: true,
+            pagination: false,
+            arrows: true,
+            drag: 'free',
+            breakpoints: {
+                1200: {
+                    perPage: 3,
+                },
+                900: {
+                    perPage: 2,
+                },
+                600: {
+                    perPage: 1.5,
+                    padding: { right: '1.5rem' },
                 },
             },
         }).mount();
@@ -134,7 +170,7 @@ function initReviewsSlider() {
             type: 'loop',
             perPage: 3,
             perMove: 1,
-            gap: '1.5rem',
+            gap: '1rem',
             autoplay: true,
             interval: 4000,
             pauseOnHover: true,
@@ -153,26 +189,27 @@ function initReviewsSlider() {
 }
 
 /* ===================================
-   Scroll Animations (Optional)
+   FAQ Accordion
    =================================== */
-function initScrollAnimations() {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
             }
         });
-    }, observerOptions);
-
-    document.querySelectorAll('.section').forEach(section => {
-        observer.observe(section);
     });
 }
 
@@ -183,21 +220,18 @@ document.addEventListener('click', function(e) {
     if (e.target.classList.contains('quick-add')) {
         e.preventDefault();
 
-        // Update cart count
         const cartCount = document.querySelector('.cart-count');
         if (cartCount) {
             let count = parseInt(cartCount.textContent) || 0;
             count++;
             cartCount.textContent = count;
 
-            // Animation feedback
             cartCount.style.transform = 'scale(1.3)';
             setTimeout(() => {
                 cartCount.style.transform = 'scale(1)';
             }, 200);
         }
 
-        // Button feedback
         const originalText = e.target.textContent;
         e.target.textContent = 'ADDED!';
         e.target.style.background = '#4caf50';
@@ -217,7 +251,7 @@ if (newsletterForm) {
     newsletterForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const input = this.querySelector('.newsletter-input');
+        const input = this.querySelector('input');
         const button = this.querySelector('.btn');
 
         if (input.value) {
@@ -242,10 +276,10 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', function() {
     const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 100) {
-        header.style.background = 'rgba(0, 0, 0, 0.95)';
+    if (currentScroll > 50) {
+        header.style.background = 'rgba(0, 0, 0, 0.98)';
     } else {
-        header.style.background = 'rgba(0, 0, 0, 0.9)';
+        header.style.background = 'rgba(0, 0, 0, 0.95)';
     }
 
     lastScroll = currentScroll;

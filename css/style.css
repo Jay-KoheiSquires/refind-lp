@@ -1,5 +1,6 @@
 /* ===================================
-   REFIND - icecartel Style v2
+   REFIND - icecartel Style v3
+   コンパクト版 + FAQ + Youtube + Celebrities Slider
    =================================== */
 
 :root {
@@ -108,7 +109,7 @@ ul {
 .top-bar {
     background: var(--color-accent);
     overflow: hidden;
-    padding: 10px 0;
+    padding: 8px 0;
 }
 
 .top-bar-track {
@@ -119,7 +120,7 @@ ul {
 }
 
 .top-bar-track span {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: #000;
@@ -146,7 +147,7 @@ ul {
 .header-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,7 +160,7 @@ ul {
 }
 
 .logo-img {
-    height: 40px;
+    height: 36px;
     width: auto;
 }
 
@@ -169,7 +170,7 @@ ul {
 }
 
 .nav-link {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -203,10 +204,10 @@ ul {
     right: 0;
     background: var(--color-accent);
     color: #000;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 700;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -261,90 +262,73 @@ ul {
 }
 
 /* ===================================
-   Hero Section
+   Hero Section (コンパクト版)
    =================================== */
-.hero-section {
-    position: relative;
-}
-
-.hero-slider {
+.hero-section.hero-compact {
     background: var(--color-bg);
 }
 
-.hero-slide {
-    position: relative;
-    min-height: 70vh;
+.hero-compact .hero-slide {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    padding: 2rem 1.5rem;
+    min-height: auto;
+    gap: 2rem;
 }
 
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hero-compact .hero-image {
+    flex: 0 0 40%;
+    max-width: 300px;
 }
 
-.hero-bg::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
-    z-index: 1;
-}
-
-.hero-bg img {
-    width: auto;
-    height: 90%;
-    max-width: none;
+.hero-compact .hero-image img {
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 2rem;
+.hero-compact .hero-content {
+    flex: 1;
+    text-align: left;
+    padding: 1rem;
 }
 
 .hero-badge {
     display: inline-block;
     background: var(--color-accent);
     color: #000;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 2px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(1.75rem, 5vw, 3rem);
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.1;
     letter-spacing: -0.02em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     text-transform: uppercase;
 }
 
 .hero-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: var(--color-text-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Button */
 .btn {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 1rem 2.5rem;
+    padding: 0.875rem 2rem;
     border-radius: 50px;
     transition: var(--transition);
 }
@@ -364,8 +348,8 @@ ul {
 .splide__arrow {
     background: rgba(255,255,255,0.1);
     border: 1px solid var(--color-border);
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     opacity: 1;
     transition: var(--transition);
 }
@@ -400,7 +384,7 @@ ul {
    =================================== */
 .trust-section {
     background: var(--color-bg-secondary);
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -409,15 +393,15 @@ ul {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .trust-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
+    gap: 0.5rem;
+    padding: 0.25rem;
 }
 
 .trust-item svg {
@@ -426,36 +410,40 @@ ul {
 }
 
 .trust-item span {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
 
 /* ===================================
-   Section Common
+   Section Common (コンパクト版)
    =================================== */
 .section {
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
     max-width: 1400px;
     margin: 0 auto;
+}
+
+.section-compact {
+    padding: 2rem 1.5rem;
 }
 
 .section-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-header.center {
     flex-direction: column;
     text-align: center;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 .section-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -463,11 +451,11 @@ ul {
 
 .section-subtitle {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .view-all {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--color-accent);
     transition: var(--transition);
@@ -478,7 +466,7 @@ ul {
 }
 
 /* ===================================
-   Product Card
+   Product Card (コンパクト版)
    =================================== */
 .product-card {
     display: block;
@@ -490,19 +478,19 @@ ul {
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .product-badge {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 0.75rem;
+    left: 0.75rem;
     background: var(--color-accent);
     color: #000;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    padding: 0.4rem 0.75rem;
+    padding: 0.3rem 0.6rem;
     border-radius: 3px;
     z-index: 10;
     text-transform: uppercase;
@@ -524,7 +512,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0.75rem;
     overflow: hidden;
 }
 
@@ -540,289 +528,212 @@ ul {
 }
 
 .product-info {
-    padding: 1rem;
+    padding: 0.75rem;
 }
 
 .product-name {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     line-height: 1.3;
 }
 
 .product-price {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    gap: 0.5rem;
 }
 
 .price-sale {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-accent);
 }
 
 .price-original {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
     text-decoration: line-through;
 }
 
-.product-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.stars {
-    color: #ffc107;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.rating-count {
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-}
-
 /* ===================================
-   Category Banner
+   Celebrities Section (WORN BY CELEBRITIES風)
    =================================== */
-.category-banner {
-    padding: 2rem 1.5rem;
+.celebrities-section {
+    background: var(--color-bg-secondary);
+    max-width: 100%;
+    padding: 2rem 0;
+}
+
+.celebrities-slider {
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-.category-banner-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.category-banner-item {
-    position: relative;
+.celebrity-card {
     aspect-ratio: 1;
     border-radius: 8px;
     overflow: hidden;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: var(--color-bg-card);
 }
 
-.category-banner-item img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
+.celebrity-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.category-banner-item:hover img {
-    transform: scale(1.1);
-}
-
-.category-banner-content {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 60%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 1.5rem;
-}
-
-.category-banner-content h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-}
-
-.category-btn {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--color-accent);
-    transition: var(--transition);
-}
-
-.category-banner-item:hover .category-btn {
-    text-decoration: underline;
+.celebrity-card:hover img {
+    transform: scale(1.05);
 }
 
 /* ===================================
-   Promo Banner
+   Youtube Section
    =================================== */
-.promo-banner {
-    background: linear-gradient(135deg, var(--color-accent) 0%, #2196f3 100%);
-    padding: 4rem 1.5rem;
-    text-align: center;
+.youtube-section {
+    background: var(--color-bg);
 }
 
-.promo-content {
-    max-width: 600px;
+.youtube-container {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.promo-tag {
-    display: inline-block;
-    background: rgba(0,0,0,0.2);
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    margin-bottom: 1rem;
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--color-bg-card);
 }
 
-.promo-title {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    font-weight: 800;
-    color: #000;
-    margin-bottom: 0.5rem;
-}
-
-.promo-text {
-    font-size: 1rem;
-    color: rgba(0,0,0,0.7);
-    margin-bottom: 1.5rem;
-}
-
-.promo-text strong {
-    color: #000;
-    font-weight: 700;
-}
-
-.promo-banner .btn-primary {
-    background: #000;
-    color: #fff;
-}
-
-.promo-banner .btn-primary:hover {
-    background: #222;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* ===================================
-   Why Section
-   =================================== */
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.why-item {
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.why-icon {
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-}
-
-.why-item h3 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.why-item p {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    line-height: 1.6;
-}
-
-/* ===================================
-   Reviews Section
+   Reviews Section (コンパクト版)
    =================================== */
 .reviews-summary {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
 .stars-large {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #ffc107;
     letter-spacing: 2px;
 }
 
 .reviews-summary p {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
-    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    margin-top: 0.15rem;
 }
 
 .review-card {
     background: var(--color-bg-card);
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     height: 100%;
 }
 
 .review-stars {
     color: #ffc107;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
 }
 
 .review-text {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
     color: var(--color-text);
 }
 
 .review-author {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .review-author strong {
     font-weight: 600;
     display: block;
+    font-size: 0.85rem;
 }
 
 .review-author span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
 }
 
-.review-verified {
-    font-size: 0.75rem;
-    color: var(--color-success);
-    font-weight: 500;
-}
-
 /* ===================================
-   Instagram Section
+   FAQ Section (アコーディオン形式)
    =================================== */
-.instagram-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0.5rem;
-    margin-top: 2rem;
+.faq-section {
+    background: var(--color-bg);
 }
 
-.instagram-item {
-    aspect-ratio: 1;
-    border-radius: 4px;
-    overflow: hidden;
-    background: var(--color-bg-card);
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.instagram-item img {
+.faq-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+.faq-question {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease, opacity var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    text-align: left;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color var(--transition);
 }
 
-.instagram-item:hover img {
-    transform: scale(1.1);
-    opacity: 0.8;
+.faq-question:hover {
+    color: var(--color-accent);
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    transition: transform var(--transition);
+    color: var(--color-text-muted);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-bottom: 1.25rem;
+}
+
+.faq-answer p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
 }
 
 /* ===================================
@@ -830,7 +741,7 @@ ul {
    =================================== */
 .newsletter-section {
     background: var(--color-bg-card);
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
@@ -840,7 +751,7 @@ ul {
 }
 
 .newsletter-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
@@ -848,23 +759,24 @@ ul {
 
 .newsletter-content p {
     color: var(--color-text-muted);
-    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
 }
 
 .newsletter-form {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .newsletter-form input {
     flex: 1;
-    padding: 1rem 1.5rem;
+    padding: 0.875rem 1.25rem;
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: 50px;
     color: var(--color-text);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .newsletter-form input::placeholder {
@@ -877,7 +789,7 @@ ul {
 }
 
 .newsletter-note {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--color-accent);
 }
 
@@ -887,7 +799,7 @@ ul {
 .footer {
     background: var(--color-bg-secondary);
     border-top: 1px solid var(--color-border);
-    padding-top: 4rem;
+    padding-top: 3rem;
 }
 
 .footer-container {
@@ -899,29 +811,29 @@ ul {
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .footer-brand p {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-top: 0.5rem;
 }
 
 .footer-logo {
-    height: 40px;
+    height: 36px;
     width: auto;
 }
 
 .footer-social {
     display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .footer-social a {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -937,18 +849,18 @@ ul {
 }
 
 .footer-col h4 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.1em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .footer-col ul li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-col ul a {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-text-muted);
     transition: color var(--transition);
 }
@@ -961,20 +873,20 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 0;
-    margin-top: 3rem;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
     border-top: 1px solid var(--color-border);
 }
 
 .footer-bottom p {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
 }
 
 .payment-methods {
     display: flex;
     gap: 1rem;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
 }
 
@@ -1003,10 +915,10 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
-    padding: 0.5rem;
+    gap: 0.2rem;
+    padding: 0.4rem;
     color: var(--color-text-muted);
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 500;
     transition: color var(--transition);
 }
@@ -1041,76 +953,62 @@ ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .category-banner-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .category-banner-grid .category-banner-item:last-child {
-        grid-column: span 2;
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .instagram-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
-    .hero-slide {
-        min-height: 60vh;
+    .hero-compact .hero-slide {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-compact .hero-image {
+        flex: none;
+        max-width: 200px;
+    }
+
+    .hero-compact .hero-content {
+        text-align: center;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .section {
-        padding: 3rem 1rem;
+        padding: 2rem 1rem;
+    }
+
+    .section-compact {
+        padding: 1.5rem 1rem;
     }
 
     .section-title {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     .trust-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
 
     .trust-item {
         flex-direction: column;
         text-align: center;
-        gap: 0.5rem;
+        gap: 0.25rem;
     }
 
     .trust-item span {
-        font-size: 0.6rem;
-    }
-
-    .category-banner-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .category-banner-grid .category-banner-item:last-child {
-        grid-column: span 1;
-    }
-
-    .why-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+        font-size: 0.55rem;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .footer-social {
@@ -1132,33 +1030,46 @@ ul {
     }
 
     body {
-        padding-bottom: 70px;
+        padding-bottom: 65px;
+    }
+
+    .faq-question {
+        font-size: 0.85rem;
+        padding: 1rem 0;
+    }
+
+    .youtube-wrapper {
+        border-radius: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .header-container {
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 1rem;
     }
 
     .logo-img {
-        height: 30px;
-    }
-
-    .hero-slide {
-        min-height: 50vh;
+        height: 28px;
     }
 
     .btn {
-        padding: 0.875rem 1.5rem;
-        font-size: 0.8rem;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.75rem;
     }
 
-    .instagram-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .hero-compact .hero-image {
+        max-width: 160px;
     }
 
-    .promo-title {
-        font-size: 1.25rem;
+    .product-info {
+        padding: 0.5rem;
+    }
+
+    .product-name {
+        font-size: 0.75rem;
+    }
+
+    .price-sale {
+        font-size: 0.9rem;
     }
 }
