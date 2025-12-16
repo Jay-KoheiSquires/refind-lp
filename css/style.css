@@ -136,25 +136,91 @@ ul { list-style: none; }
     background: var(--color-text);
 }
 
-/* Mobile Menu */
+/* Mobile Menu (icecartel style with images) */
 .mobile-menu {
     display: block;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100vh;
     background: var(--color-bg);
-    z-index: 999;
-    padding: 70px 1rem 2rem;
+    z-index: 9999;
+    padding: 0;
     transform: translateX(-100%);
     transition: transform var(--transition);
+    overflow-y: auto;
 }
 .mobile-menu.active { transform: translateX(0); }
-.mobile-nav { display: flex; flex-direction: column; }
-.mobile-nav a {
-    padding: 0.875rem 0;
-    font-size: 1rem;
-    font-weight: 600;
+
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
     border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    background: var(--color-bg);
+    z-index: 10;
+}
+.mobile-menu-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+.mobile-menu-close {
+    color: var(--color-text);
+    padding: 0.25rem;
+}
+
+.mobile-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 1rem;
+}
+.mobile-menu-card {
+    display: block;
+    text-align: center;
+}
+.mobile-menu-card-image {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--color-bg-card);
+    margin-bottom: 0.5rem;
+}
+.mobile-menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+.mobile-menu-card:hover .mobile-menu-card-image img {
+    transform: scale(1.05);
+}
+.mobile-menu-card-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 2rem;
+    border-top: 1px solid var(--color-border);
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+.mobile-menu-links a {
+    padding: 0.75rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+}
+.mobile-menu-links a:hover {
+    color: var(--color-accent);
 }
 
 /* ===================================
@@ -281,6 +347,48 @@ ul { list-style: none; }
     font-size: 0.55rem;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+/* ===================================
+   Category Slider (HERO下)
+   =================================== */
+.category-slider-section {
+    background: var(--color-bg);
+    padding: 1rem 0.5rem;
+}
+.category-slide-card {
+    display: block;
+    text-align: center;
+}
+.category-slide-image {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--color-bg-card);
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--color-border);
+    transition: border-color var(--transition);
+}
+.category-slide-card:hover .category-slide-image {
+    border-color: var(--color-accent);
+}
+.category-slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition);
+}
+.category-slide-card:hover .category-slide-image img {
+    transform: scale(1.1);
+}
+.category-slide-title {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+}
+.category-slider .splide__arrow {
+    display: none;
 }
 
 /* ===================================

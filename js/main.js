@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initPageLoader();
     initMobileMenu();
     initHeroSlider();
+    initCategorySlider();
     initProductSliders();
     initCelebritiesSlider();
     initReviewsSlider();
@@ -30,19 +31,32 @@ function initPageLoader() {
    =================================== */
 function initMobileMenu() {
     const menuBtn = document.getElementById('mobileMenuBtn');
+    const menuClose = document.getElementById('mobileMenuClose');
     const menu = document.getElementById('mobileMenu');
 
     if (menuBtn && menu) {
         menuBtn.addEventListener('click', function() {
-            menu.classList.toggle('active');
-            menuBtn.classList.toggle('active');
+            menu.classList.add('active');
+            menuBtn.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
 
-        document.addEventListener('click', function(e) {
-            if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        if (menuClose) {
+            menuClose.addEventListener('click', function() {
                 menu.classList.remove('active');
                 menuBtn.classList.remove('active');
-            }
+                document.body.style.overflow = '';
+            });
+        }
+
+        // メニュー内のリンクをクリックしたら閉じる
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                menu.classList.remove('active');
+                menuBtn.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         });
     }
 }
@@ -64,6 +78,37 @@ function initHeroSlider() {
             arrows: true,
             pagination: true,
             speed: 800,
+        }).mount();
+    }
+}
+
+/* ===================================
+   Category Slider (HERO下)
+   =================================== */
+function initCategorySlider() {
+    const categorySlider = document.getElementById('categorySlider');
+
+    if (categorySlider) {
+        new Splide('#categorySlider', {
+            type: 'slide',
+            perPage: 5,
+            perMove: 1,
+            gap: '0.5rem',
+            pagination: false,
+            arrows: false,
+            drag: 'free',
+            snap: true,
+            breakpoints: {
+                900: {
+                    perPage: 4,
+                },
+                600: {
+                    perPage: 3.5,
+                },
+                400: {
+                    perPage: 3,
+                },
+            },
         }).mount();
     }
 }
