@@ -444,6 +444,40 @@ ul { list-style: none; }
 }
 .product-badge.sale { background: var(--color-sale); color: #fff; }
 .product-badge.new { background: var(--color-success); color: #fff; }
+
+/* 配送バッジ（在庫あり/受注生産） */
+.delivery-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.55rem;
+    font-weight: 600;
+    margin-top: 0.35rem;
+}
+.delivery-badge--in-stock {
+    background: rgba(0, 200, 83, 0.15);
+    border: 1px solid rgba(0, 200, 83, 0.5);
+    color: #00c853;
+}
+.delivery-badge--made-to-order {
+    background: rgba(66, 176, 240, 0.15);
+    border: 1px solid rgba(66, 176, 240, 0.5);
+    color: #42B0F0;
+}
+.delivery-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.delivery-badge--in-stock .dot {
+    background: #00c853;
+}
+.delivery-badge--made-to-order .dot {
+    background: #42B0F0;
+}
 .product-image {
     aspect-ratio: 1;
     background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
