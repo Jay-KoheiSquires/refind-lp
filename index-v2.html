@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REFIND | Moissanite Jewelry - V2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* パターンB: 強化版配送バッジ */
+        .delivery-badge-v2 {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.55rem;
+            font-weight: 600;
+            margin-top: 0.4rem;
+        }
+        .delivery-badge-v2--in-stock {
+            background: linear-gradient(135deg, rgba(0, 200, 83, 0.2), rgba(0, 200, 83, 0.1));
+            border: 1px solid rgba(0, 200, 83, 0.6);
+            color: #00c853;
+        }
+        .delivery-badge-v2--low-stock {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(255, 193, 7, 0.1));
+            border: 1px solid rgba(255, 193, 7, 0.6);
+            color: #ffc107;
+        }
+        .delivery-badge-v2--made-to-order {
+            background: linear-gradient(135deg, rgba(66, 176, 240, 0.2), rgba(66, 176, 240, 0.1));
+            border: 1px solid rgba(66, 176, 240, 0.6);
+            color: #42B0F0;
+        }
+        .delivery-badge-v2 .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .delivery-badge-v2--in-stock .dot {
+            background: #00c853;
+            animation: pulse-green 2s infinite;
+        }
+        .delivery-badge-v2--low-stock .dot {
+            background: #ffc107;
+            animation: pulse-yellow 1.5s infinite;
+        }
+        .delivery-badge-v2--made-to-order .dot {
+            background: #42B0F0;
+        }
+        @keyframes pulse-green {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 200, 83, 0.5); }
+            50% { box-shadow: 0 0 0 4px rgba(0, 200, 83, 0); }
+        }
+        @keyframes pulse-yellow {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.5); }
+            50% { box-shadow: 0 0 0 4px rgba(255, 193, 7, 0); }
+        }
+        .delivery-text-v2 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+            line-height: 1.2;
+        }
+        .delivery-main {
+            font-weight: 700;
+        }
+        .delivery-sub {
+            font-size: 0.5rem;
+            opacity: 0.85;
+        }
+        .stock-count {
+            font-size: 0.5rem;
+            margin-left: auto;
+            opacity: 0.8;
+        }
+        /* 版表示バナー */
+        .version-banner {
+            position: fixed;
+            top: 50px;
+            right: 0;
+            background: linear-gradient(135deg, #42B0F0, #2d8bc4);
+            color: #fff;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.6rem;
+            font-weight: 700;
+            z-index: 9999;
+            border-radius: 0 0 0 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 版表示 -->
+    <div class="version-banner">提案版 V2</div>
+
+    <!-- Announcement Bar -->
+    <div class="top-bar">
+        <div class="top-bar-track">
+            <span>FREE SHIPPING OVER ¥15,000</span>
+            <span>•</span>
+            <span>30-DAY RETURNS</span>
+            <span>•</span>
+            <span>LIFETIME WARRANTY</span>
+            <span>•</span>
+            <span>FREE SHIPPING OVER ¥15,000</span>
+            <span>•</span>
+            <span>30-DAY RETURNS</span>
+            <span>•</span>
+            <span>LIFETIME WARRANTY</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="#" class="logo">
+                <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#" class="nav-link">NEW</a>
+                <a href="#" class="nav-link">NECKLACES</a>
+                <a href="#" class="nav-link">EARRINGS</a>
+                <a href="#" class="nav-link">SETS</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+                <button class="icon-btn cart-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-slide">
+            <div class="hero-bg">
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Cuban Link">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="hero-badge">NEW COLLECTION</span>
+                <h1 class="hero-title">CUBAN LINK<br>CHAIN</h1>
+                <p class="hero-text">VVS Moissanite / 18K Gold</p>
+                <a href="product-v2.html" class="btn btn-primary">SHOP NOW</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>SECURE</span>
+            </div>
+            <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+                <span>FAST SHIP</span>
+            </div>
+            <div class="trust-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                    <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+                <span>WARRANTY</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">BEST SELLERS</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <div class="splide product-slider" id="bestSellerSlider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <!-- 商品1: 在庫あり -->
+                    <li class="splide__slide">
+                        <a href="product-v2.html" class="product-card">
+                            <div class="product-badge">BEST</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Cuban Link Chain">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Cuban Link Chain 8mm</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥49,800</span>
+                                    <span class="price-original">¥68,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--in-stock">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">即日発送</span>
+                                        <span class="delivery-sub">12/24までにお届け</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 商品2: 残りわずか -->
+                    <li class="splide__slide">
+                        <a href="product-v2.html?stock=low" class="product-card">
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d681d4497fb7b886f2985c649ceea3e7.png" alt="Tennis Chain">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Tennis Chain 4mm</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥78,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--low-stock">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">残り3点｜即日発送</span>
+                                        <span class="delivery-sub">12/24までにお届け</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 商品3: 在庫あり -->
+                    <li class="splide__slide">
+                        <a href="product-v2.html" class="product-card">
+                            <div class="product-badge sale">-30%</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/02a07646972bc0064b13fdfc97f3f728.png" alt="Cross Pendant">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Cross Pendant</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥35,000</span>
+                                    <span class="price-original">¥50,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--in-stock">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">即日発送</span>
+                                        <span class="delivery-sub">12/24までにお届け</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 商品4: 受注生産 -->
+                    <li class="splide__slide">
+                        <a href="product-v2.html?stock=order" class="product-card">
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/c3e2ea7c0a7581056eedfdbc6468ce60.png" alt="Miami Cuban">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Miami Cuban Link</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥58,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--made-to-order">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">受注生産</span>
+                                        <span class="delivery-sub">1/15頃お届け予定</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- 商品5: 残りわずか -->
+                    <li class="splide__slide">
+                        <a href="product-v2.html?stock=low" class="product-card">
+                            <div class="product-badge new">NEW</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/8cf9814f5bd8e4235d0cc1370eb52ce4.png" alt="Rope Chain">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Rope Chain 5mm</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥42,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--low-stock">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">残り1点｜即日発送</span>
+                                        <span class="delivery-sub">12/24までにお届け</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">NEW ARRIVALS</h2>
+            <a href="#" class="view-all">View All</a>
+        </div>
+        <div class="splide product-slider" id="newArrivalsSlider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <a href="product-v2.html?stock=order" class="product-card">
+                            <div class="product-badge new">NEW</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/4e76ede6214d636f2d96b6a26a17bc7e.png" alt="Figaro Chain">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Figaro Chain 6mm</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥45,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--made-to-order">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">受注生産</span>
+                                        <span class="delivery-sub">1/10頃お届け予定</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="product-v2.html" class="product-card">
+                            <div class="product-badge new">NEW</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/dee98b82f198c3fdc6e8268833400d11.png" alt="Box Chain Set">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Box Chain Set</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥89,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--in-stock">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">即日発送</span>
+                                        <span class="delivery-sub">12/24までにお届け</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="product-v2.html" class="product-card">
+                            <div class="product-badge new">NEW</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/f4a6f3cb8a05fee893a517c0c6266e17.png" alt="Earrings">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Moissanite Studs</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥32,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--in-stock">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">即日発送</span>
+                                        <span class="delivery-sub">12/24までにお届け</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="splide__slide">
+                        <a href="product-v2.html?stock=order" class="product-card">
+                            <div class="product-badge new">NEW</div>
+                            <div class="product-image">
+                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/1d2abd634b6dc0ed96d9aee863234953.png" alt="Set">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Premium Set</h3>
+                                <div class="product-price">
+                                    <span class="price-sale">¥128,000</span>
+                                </div>
+                                <div class="delivery-badge-v2 delivery-badge-v2--made-to-order">
+                                    <span class="dot"></span>
+                                    <div class="delivery-text-v2">
+                                        <span class="delivery-main">受注生産</span>
+                                        <span class="delivery-sub">1/20頃お届け予定</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 凡例 -->
+    <section class="section" style="background: var(--color-bg-card); border-radius: 8px; margin: 0 1rem 1rem;">
+        <h3 style="font-size: 0.8rem; margin-bottom: 1rem; text-align: center;">配送ステータスの見方</h3>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="delivery-badge-v2 delivery-badge-v2--in-stock" style="margin: 0;">
+                    <span class="dot"></span>
+                    <span class="delivery-main">即日発送</span>
+                </div>
+                <span style="font-size: 0.7rem; color: var(--color-text-muted);">在庫あり。14時までの注文で当日発送</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="delivery-badge-v2 delivery-badge-v2--low-stock" style="margin: 0;">
+                    <span class="dot"></span>
+                    <span class="delivery-main">残りわずか</span>
+                </div>
+                <span style="font-size: 0.7rem; color: var(--color-text-muted);">在庫残り5点以下。お早めに</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div class="delivery-badge-v2 delivery-badge-v2--made-to-order" style="margin: 0;">
+                    <span class="dot"></span>
+                    <span class="delivery-main">受注生産</span>
+                </div>
+                <span style="font-size: 0.7rem; color: var(--color-text-muted);">ご注文後に製作。2〜4週間でお届け</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="footer-logo">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 REFIND - V2 提案版</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <a href="#" class="nav-item active">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span>Wishlist</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span>Cart</span>
+        </a>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuban Link Chain 8mm | REFIND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* 商品詳細ページ専用スタイル */
+        .product-page {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-gallery {
+            margin-bottom: 1.5rem;
+        }
+        .product-main-image {
+            aspect-ratio: 1;
+            background: var(--color-bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 0.75rem;
+        }
+        .product-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1rem;
+        }
+        .product-thumbs {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .product-thumb {
+            width: 60px;
+            height: 60px;
+            background: var(--color-bg-card);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        .product-thumb.active {
+            border-color: var(--color-accent);
+        }
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .product-details {
+            padding-bottom: 100px;
+        }
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .product-price-large {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .price-current {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+        .price-was {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            text-decoration: line-through;
+        }
+
+        /* パターンA: シンプルな配送バッジ */
+        .delivery-info-simple {
+            background: var(--color-bg-card);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .delivery-status-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .delivery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .delivery-dot.in-stock { background: #00c853; }
+        .delivery-dot.made-to-order { background: #42B0F0; }
+        .delivery-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .delivery-time {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            margin-top: 0.25rem;
+            margin-left: 1.4rem;
+        }
+
+        /* バリエーション選択 */
+        .variant-section {
+            margin-bottom: 1.5rem;
+        }
+        .variant-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .variant-options {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .variant-btn {
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 6px;
+            background: transparent;
+            color: var(--color-text);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .variant-btn:hover {
+            border-color: var(--color-text-muted);
+        }
+        .variant-btn.active {
+            border-color: var(--color-accent);
+            background: rgba(66, 176, 240, 0.1);
+        }
+
+        /* 購入ボタン */
+        .buy-section {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            right: 0;
+            background: var(--color-bg);
+            border-top: 1px solid var(--color-border);
+            padding: 1rem;
+            z-index: 100;
+        }
+        .btn-add-cart {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-accent);
+            color: #000;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* 商品説明 */
+        .product-description {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border);
+        }
+        .product-description h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .product-description p {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        @media (min-width: 768px) {
+            .product-page {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+            .product-details {
+                padding-bottom: 0;
+            }
+            .buy-section {
+                position: static;
+                background: transparent;
+                border-top: none;
+                padding: 0;
+                margin-top: 1rem;
+            }
+            .mobile-bottom-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="back-btn" style="color: var(--color-text); padding: 0.4rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </a>
+            <a href="index.html" class="logo">
+                <img src="https://baseec-img-mng.akamaized.net/images/user/logo/40799e147a7d1684152ebbcdce0b87d9.png" alt="REFIND" class="logo-img">
+            </a>
+            <div class="header-actions">
+                <button class="icon-btn cart-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <!-- 商品画像 -->
+        <div class="product-gallery">
+            <div class="product-main-image">
+                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="Cuban Link Chain 8mm" id="mainImage">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active">
+                    <img src="https://baseec-img-mng.akamaized.net/images/item/origin/3f5af8eb7542e1dc46e36efdbf506105.png" alt="View 1">
+                </div>
+                <div class="product-thumb">
+                    <img src="https://baseec-img-mng.akamaized.net/images/item/origin/c3e2ea7c0a7581056eedfdbc6468ce60.png" alt="View 2">
+                </div>
+                <div class="product-thumb">
+                    <img src="https://baseec-img-mng.akamaized.net/images/item/origin/8cf9814f5bd8e4235d0cc1370eb52ce4.png" alt="View 3">
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品詳細 -->
+        <div class="product-details">
+            <h1 class="product-title">Cuban Link Chain 8mm</h1>
+            <div class="product-price-large">
+                <span class="price-current">¥49,800</span>
+                <span class="price-was">¥68,000</span>
+            </div>
+
+            <!-- パターンA: シンプルな配送情報 -->
+            <div class="delivery-info-simple">
+                <div class="delivery-status-row">
+                    <span class="delivery-dot in-stock"></span>
+                    <span class="delivery-label">在庫あり｜即日発送</span>
+                </div>
+                <p class="delivery-time">平日14時までのご注文で当日発送</p>
+            </div>
+
+            <!-- カラー選択 -->
+            <div class="variant-section">
+                <p class="variant-label">カラー</p>
+                <div class="variant-options">
+                    <button class="variant-btn active">18K Gold</button>
+                    <button class="variant-btn">Silver</button>
+                    <button class="variant-btn">Rose Gold</button>
+                </div>
+            </div>
+
+            <!-- 長さ選択 -->
+            <div class="variant-section">
+                <p class="variant-label">長さ</p>
+                <div class="variant-options">
+                    <button class="variant-btn">45cm</button>
+                    <button class="variant-btn active">50cm</button>
+                    <button class="variant-btn">55cm</button>
+                    <button class="variant-btn">60cm</button>
+                </div>
+            </div>
+
+            <!-- 購入ボタン（PC版） -->
+            <div class="buy-section">
+                <button class="btn-add-cart">カートに追加</button>
+            </div>
+
+            <!-- 商品説明 -->
+            <div class="product-description">
+                <h3>商品説明</h3>
+                <p>最高品質のVVSモアサナイトを使用したキューバンリンクチェーン。18Kゴールドコーティングで、本物のゴールドと見分けがつかない輝きを実現。永久保証付き。</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Home</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            <span>Search</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span>Wishlist</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span>Cart</span>
+        </a>
+    </nav>
+</body>
+</html>
